@@ -5,6 +5,6 @@ let config = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '1234',
-    database: 'patient_record_db'
+    database: 'PRO_db'
 })
 module.exports = config;

@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import HomePage from './Views/IndexPage';
 import {
   BrowserRouter ,
@@ -17,23 +15,33 @@ import {
 import Dashboard from './Views/ViewAccounts/Dashboard';
 import LoginPage from './Views/ViewAccounts/Login';
 import Error404 from './Views/Layout/Error';
+import Layout from './Views/Layout/masterpage';
+import SignUp from './Views/ViewAccounts/signup';
+import PatientAboutPage from './Views/component/PatientAboutPage';
+import OfficerProfile from './Views/component/profileComponent';
+import PatientDetail from './Views/component/table';
+import EditPatientProfile from './Views/component/editPatientProfile';
+import PatientProfile from './Views/component/patientsprofile';
+import ViewDashboard from './Views/ViewComponent/ViewDashboard';
 
 
 
 function App() {
   return (
     <BrowserRouter>
-    
-      <Switch>
-       
-           
+    <Switch>
+    <Layout  path="/">   
+            
+        <Switch>
         <Route path="/dashboard" component={Dashboard}/>
-        <Route exact path="/" component={HomePage} />
-        <Route path="*" component={Error404} />
-      
-   
+          <Route path="/login" component={LoginPage} />
+          < Route path="/signup" component={SignUp} />
+          <Route exact path="/" component={HomePage} />   
+        </Switch>
+
+      </Layout>    
       </Switch>
-      
+  
     </BrowserRouter>
   );
 }
