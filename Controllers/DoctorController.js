@@ -27,11 +27,44 @@ router.get('/:id', function(req, res, next) {
         })
     })
     // Add to patients Table
-router.post('/insert', function(req, res, next) {
-    var INSERT_INTO_PATIENTS_QUERY = "INSERT INTO patients ";
-    Connections.query(INSERT_INTO_PATIENTS_QUERY, [], (err, row, field) => {
+router.get('/', function(req, res, next) {
+    var SELECT_ALL_FROM_DOCTOR_QUERY = 'select * from doctor ';
+    Connections.query(SELECT_ALL_FROM_DOCTOR_QUERY, (err, result) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.json(result);
+        }
+    })
+})
+
+router.get('/:name/:id/', function(req, res, next) {
+    var SELECT_ALL_FROM_DOCTOR_QUERY = 'select * from doctor where username =? and userpass =? ';
+    Connections.query(SELECT_ALL_FROM_DOCTOR_QUERY, [req.params.name, req.params.id], (err, result) => {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.json(result);
+        }
+    })
+})
+
+router.post('/', function(req, res, next) {
+
+    name = req.body.name,
+        telephone = req.body.telephone,
+        dob = req.body.dob,
+        email = req.body.email,
+        username = req.body.username,
+        userpass = req.body.userpass,
+        residence = req.body.residence,
+        hospital = req.body.hospital
+
+
+    var INSERT_INTO_PATIENTS_QUERY = "INSERT INTO doctor( name, dob, username, userpass, email, telephone, residence, hospital)  values(?,?,?,?,?,?,?,?) ";
+    Connections.query(INSERT_INTO_PATIENTS_QUERY, [name, dob, username, userpass, email, telephone, residence, hospital], (err, row, field) => {
         if (!err) {
-            console.log("Patients table affectd");
+            console.log("Doctor table affected");
         } else {
             console.log(err);
         }

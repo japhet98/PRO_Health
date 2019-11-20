@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../../res/css/footer.css'
+import logo from '../../res/image/TS_logoE.jpg'
 class Footer extends Component {
     state = {  }
     render() { 
@@ -8,25 +9,25 @@ class Footer extends Component {
         <div class="container">
           <div class="row row-30">
             <div class="col-md-4 col-xl-5">
-              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="logo" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"/></a>
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src={logo} alt="logo" width="140" height="37" srcset=""/></a>
                 <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
               
-                <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
+                <p class="rights"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>PRO</span><span>. </span><span>All Rights Reserved.</span></p>
               </div>
             </div>
             <div class="col-md-4">
               <h5>Contacts</h5>
               <dl class="contact-list">
                 <dt>Address:</dt>
-                <dd>798 South Park Avenue, Jaipur, Raj</dd>
+                <dd>UMaT Tarkwa - Ghana </dd>
               </dl>
               <dl class="contact-list">
                 <dt>email:</dt>
-                <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>
+                <dd><a href="mailto:#">projectgroup@yahoo.com</a></dd>
               </dl>
               <dl class="contact-list">
                 <dt>phones:</dt>
-                <dd><a href="tel:#">https://karosearch.com</a> <span>or</span> <a href="tel:#">https://karosearch.com</a>
+                <dd><a href="tel:#">https://pro.com</a> <span>or</span> <a href="tel:#">https://pro.com</a>
                 </dd>
               </dl>
             </div>

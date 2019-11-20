@@ -23,6 +23,7 @@ import PatientDetail from './Views/component/table';
 import EditPatientProfile from './Views/component/editPatientProfile';
 import PatientProfile from './Views/component/patientsprofile';
 import ViewDashboard from './Views/ViewComponent/ViewDashboard';
+import AboutPage from './Views/Layout/aboutPage';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/login" component={LoginPage} />
           < Route path="/signup" component={SignUp} />
           <Route exact path="/" component={HomePage} />   
+          <Route path ="/about-us" component ={AboutPage}/>
         </Switch>
 
       </Layout>    
